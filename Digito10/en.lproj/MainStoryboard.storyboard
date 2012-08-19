@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zka-Dz-ugz">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+    </dependencies>
+    <scenes>
+        <!--Principal View Controller - Opciones-->
+        <scene sceneID="Txy-TU-iwK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRO-hU-az9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="KH8-ID-Uba" customClass="PrincipalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jTN-Xx-eRm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg-splash.png" id="2jU-Q0-4Ld">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QQs-Uj-vEv">
+                                <rect key="frame" x="22" y="221" width="276" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Listar Contactos" backgroundImage="button-splash.png">
+                                    <color key="titleColor" red="0.37254901959999998" green="0.4431372549" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="button-splash-pressed.png"/>
+                                <state key="highlighted" backgroundImage="button-splash-pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VyE-oj-eiv" kind="push" id="rlj-Sg-N9h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gyS-Dt-Uzq">
+                                <rect key="frame" x="22" y="281" width="276" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Actualizar Contactos" backgroundImage="button-splash.png">
+                                    <color key="titleColor" red="0.37254901959999998" green="0.4431372549" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="button-splash-pressed.png"/>
+                                <state key="highlighted" backgroundImage="button-splash-pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Digito 10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="0Y3-dl-nNj" customClass="FXLabel">
+                                <rect key="frame" x="20" y="0.0" width="280" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Contactos Moviles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="k5K-z6-RaP">
+                                <rect key="frame" x="42" y="91" width="238" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.078431372550000003" green="0.25490196079999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Opciones" id="U8x-UC-bXl"/>
+                    <connections>
+                        <outlet property="actualizarContactosButton" destination="gyS-Dt-Uzq" id="IYB-Ez-Ds4"/>
+                        <outlet property="listarContactosButton" destination="QQs-Uj-vEv" id="uuz-MJ-uRN"/>
+                        <outlet property="logoLabel" destination="0Y3-dl-nNj" id="ajF-zF-a8L"/>
+                        <outlet property="numeroContactos" destination="k5K-z6-RaP" id="gE9-M0-awm"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="732" y="-180"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rsg-Bu-saC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjt-vr-ZQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="zka-Dz-ugz" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="WFv-il-FwD">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X4O-WW-1aN" kind="relationship" relationship="viewControllers" id="Q97-OX-04r"/>
+                        <segue destination="fts-sX-fh9" kind="relationship" relationship="viewControllers" id="qHO-eZ-RrD"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-316" y="-180"/>
+        </scene>
+        <!--Contactos View Controller - Contactos-->
+        <scene sceneID="tVQ-sE-aCQ">
+            <objects>
+                <tableViewController storyboardIdentifier="ContactosViewController" id="VyE-oj-eiv" customClass="ContactosViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gnI-zd-x9C">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ContactosCell" rowHeight="77" id="OBc-qF-j1b" customClass="ContactosCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-element.png" id="bT7-2U-eky">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="frame.png" id="KUK-NB-6fk">
+                                            <rect key="frame" x="10" y="1" width="73" height="73"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blank_avatar.png" id="EkV-4C-KrJ">
+                                            <rect key="frame" x="17" y="7" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iphone.png" id="1nq-gL-td6">
+                                            <rect key="frame" x="91" y="36" width="12" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="25 May 2012" lineBreakMode="tailTruncation" minimumFontSize="10" id="R61-av-o6k">
+                                            <rect key="frame" x="113" y="34" width="138" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nombre" lineBreakMode="tailTruncation" minimumFontSize="10" id="czf-Mf-cJz">
+                                            <rect key="frame" x="91" y="9" width="196" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="EkV-4C-KrJ" id="Y20-tk-UZ3"/>
+                                    <outlet property="movilLabel" destination="R61-av-o6k" id="Atf-Mq-652"/>
+                                    <outlet property="nombreLabel" destination="czf-Mf-cJz" id="VaL-Wd-BDJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contactos" id="Uyn-t7-1g4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdZ-gH-i9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="-180"/>
+        </scene>
+        <!--Navigation Controller - Ayuda-->
+        <scene sceneID="5Vs-jc-d7d">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYG-aS-I6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="fts-sX-fh9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ayuda" image="chats.png" id="Cje-gH-tYo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jMa-YS-u2f">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sUF-Ud-6oO" kind="relationship" relationship="rootViewController" id="2wJ-HE-EeN"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="192" y="447"/>
+        </scene>
+        <!--View Controller - Ayuda-->
+        <scene sceneID="1qI-W9-wsw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-Nu-ujs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="sUF-Ud-6oO" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" image="bg-splash.png" id="PLl-wp-7G9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <navigationItem key="navigationItem" title="Ayuda" id="UwD-pi-Ww9"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="739" y="447"/>
+        </scene>
+        <!--Navigation Controller - Contactos-->
+        <scene sceneID="aJ3-QC-UTo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecK-pR-zZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="X4O-WW-1aN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contactos" image="friends.png" id="btt-B1-fIv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nua-QM-JUi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KH8-ID-Uba" kind="relationship" relationship="rootViewController" id="Bx9-w2-yRu"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="206" y="-180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-splash.png" width="320" height="480"/>
+        <image name="blank_avatar.png" width="120" height="120"/>
+        <image name="button-splash-pressed.png" width="276" height="52"/>
+        <image name="button-splash.png" width="276" height="52"/>
+        <image name="chats.png" width="29" height="28"/>
+        <image name="frame.png" width="73" height="74"/>
+        <image name="friends.png" width="38" height="27"/>
+        <image name="iphone.png" width="30" height="30"/>
+        <image name="list-element.png" width="320" height="77"/>
+    </resources>
+    <classes>
+        <class className="ContactosCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactosCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="avatarImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="movil2Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="movilLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nombreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ContactosViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactosViewController.h"/>
+        </class>
+        <class className="FXLabel" superclassName="UILabel">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FXLabel.h"/>
+        </class>
+        <class className="PrincipalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PrincipalViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="actualizarContactosButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listarContactosButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoLabel" candidateClass="FXLabel"/>
+                <relationship kind="outlet" name="numeroContactos" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
