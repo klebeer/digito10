@@ -130,7 +130,6 @@
 		99F61A5B15D887DD00A18AA0 = {
 			isa = PBXGroup;
 			children = (
-				99F61B1015D88C0700A18AA0 /* QuartzCore.framework */,
 				99F61A7015D887DD00A18AA0 /* Digito10 */,
 				99F61A6915D887DD00A18AA0 /* Frameworks */,
 				99F61A6715D887DD00A18AA0 /* Products */,
@@ -148,6 +147,7 @@
 		99F61A6915D887DD00A18AA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99F61B1015D88C0700A18AA0 /* QuartzCore.framework */,
 				99F61A8E15D8884D00A18AA0 /* AddressBook.framework */,
 				99F61A6A15D887DD00A18AA0 /* UIKit.framework */,
 				99F61A6C15D887DD00A18AA0 /* Foundation.framework */,
