@@ -13,7 +13,7 @@
     NSMutableArray *listaMoviles;
     
 }
-@synthesize nombre,apellido, celulares,indicePersona,labels,avatar;
+@synthesize nombre,apellido, celulares,indicePersona,dictionarioCelulares,avatar;
 
 -(NSString *)nombreCompleto
 {
@@ -30,7 +30,7 @@
     return [self.nombre compare:otherObject.nombre];
 }
 
--(NSString *) generarNumero:(NSString *)numero
+-(NSString *) generarNumeroNuevo:(NSString *)numero
 
 {
     
@@ -38,10 +38,11 @@
     numero = [numero stringByReplacingOccurrencesOfString:@" " withString:@""];
     numero = [numero stringByReplacingOccurrencesOfString:@"(" withString:@""];
     numero = [numero stringByReplacingOccurrencesOfString:@")" withString:@""];
+    numero = [numero stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
-    if([numero hasPrefix:@"+"] && [[numero substringWithRange:NSMakeRange(0, 4)]isEqualToString: @"+593"])
+    if([numero hasPrefix:@"+"] && [[numero substringWithRange:NSMakeRange(0, 4)]isEqualToString: @"+593"] && [numero length]==12)
     {
-        //solo los que empiezan con +593
+        //solo los que empiezan con +593 y tienen longitud 12
         [nuevoNumero appendString:[numero substringWithRange:NSMakeRange(0, 4)]];
         [nuevoNumero appendString:@"9"];
         if([[numero substringWithRange:NSMakeRange(4,1)] isEqual:@"0"])
@@ -53,9 +54,12 @@
         }
         
     }else
-        if([[numero substringWithRange:NSMakeRange(0, 3)]isEqualToString: @"593"])
+        if([[numero substringWithRange:NSMakeRange(0, 3)]isEqualToString: @"593"]&& [numero length]==11)
         {
-            //solo los que empiezan con +593
+         
+
+            //solo los que empiezan con 593 y tienen longitud 11
+            [nuevoNumero appendString:@"+"];
             [nuevoNumero appendString:[numero substringWithRange:NSMakeRange(0, 3)]];
             [nuevoNumero appendString:@"9"];
             if([[numero substringWithRange:NSMakeRange(3,1)] isEqual:@"0"])
@@ -67,8 +71,9 @@
             }
             
         }else
-            if([numero hasPrefix:@"0"])
+            if([numero hasPrefix:@"0"]&& [numero length]==9)
             {
+                //solo los que empiezan con 09,8,7,5 y tienen longitud 9
                 [nuevoNumero appendString:@"09"];
                 [nuevoNumero appendString:[numero substringFromIndex:1]];
                 
@@ -79,15 +84,9 @@
     return [nuevoNumero description];
 }
 
--(NSMutableArray *) listarCelularesActualizados
+-(long) contarMoviles
 {
-    listaMoviles=  [NSMutableArray arrayWithCapacity:[celulares count]];
-    for(int i=0;i<[celulares count];i++)
-    {
-        [listaMoviles addObject:  [self generarNumero:[celulares objectAtIndex:i]]];
-    }
-    
-    return listaMoviles;
+    return [celulares count];
 }
 
 

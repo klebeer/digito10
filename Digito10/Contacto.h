@@ -13,14 +13,17 @@
 @property (nonatomic, retain) NSString *nombre;
 @property (nonatomic, retain) NSString *apellido;
 @property (nonatomic, retain) NSMutableArray *celulares;
+@property (nonatomic, retain) NSDictionary *dictionarioCelulares;
 @property (nonatomic) int indicePersona;
-@property (nonatomic, retain) NSMutableArray *labels;
 @property (nonatomic, retain) UIImage *avatar;
+
 
 -(NSString *)nombreCompleto;
 
 -(NSComparisonResult)ordenar:(Contacto *)otherObject;
 
--(NSMutableArray *) listarCelularesActualizados;
+-(long ) contarMoviles;
+
+-(NSString *) generarNumeroNuevo:(NSString *)numero;
 
 @end

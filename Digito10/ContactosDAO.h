@@ -14,8 +14,7 @@
 
 +(ContactosDAO *) singleton;
 -(NSArray*)listarContactos;
--(long) contarContactos;
--(BOOL) actualizarPersona:(Contacto *)contacto;
+-(BOOL) actualizarTelefono:(Contacto *)contacto;
 
 @end
 

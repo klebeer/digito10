@@ -9,6 +9,7 @@
 #import "PrincipalViewController.h"
 #import "ContactosDAO.h"
 #import "ContactosViewController.h"
+#import "ActualizarViewController.h"
 
 @interface PrincipalViewController ()
 
@@ -17,7 +18,7 @@
 
 @implementation PrincipalViewController
 
-@synthesize numeroContactos, listarContactosButton,actualizarContactosButton,logoLabel;
+@synthesize numeroContactos, listarContactosButton,actualizarContactosButton,logoLabel,contactos;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +33,7 @@
 {
     
     
-    NSArray *contactos= [[ContactosDAO singleton]  listarContactos];
+    contactos=[[ContactosDAO singleton]  listarContactos];
     
     NSMutableString *numeroContactosLabel=[[NSMutableString alloc] init];
     [numeroContactosLabel appendString: [numeroContactos text]];
@@ -85,9 +86,10 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-    if([title isEqualToString:@"Aceptar"])
+    if([title isEqualToString:@"Aceptar"] && [contactos count]>0)
 	{
-		NSLog(@" Aceptar");
+        ActualizarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ActualizarViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
 	}
 }
 

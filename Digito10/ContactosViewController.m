@@ -18,7 +18,7 @@
 @end
 
 @implementation ContactosViewController
-@synthesize imageAvatarsInProgress;
+@synthesize imageAvatarsInProgress,contactos;
 
 #pragma mark
 
@@ -35,6 +35,7 @@
 {
     [super viewDidLoad];
     self.contactos=[NSMutableArray arrayWithArray: [[ContactosDAO singleton] listarContactos]];
+
     self.imageAvatarsInProgress = [NSMutableDictionary dictionary];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,36 +81,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ContactosCell";
-    
-    
-    // add a placeholder cell while waiting on table data
     int numeroContactos = [self.contactos count];
-	
-    
     ContactosCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     if(numeroContactos>0)
     {
         Contacto *contacto=[self.contactos objectAtIndex:indexPath.row];
-        
+       
         [cell.nombreLabel setText: [contacto nombreCompleto]];
-        
-        [cell.movilLabel setText:[[contacto listarCelularesActualizados] objectAtIndex:0]];
-        
+        [cell.movil2Label setText:[NSString stringWithFormat:@"%ld",[contacto contarMoviles]]];
         if(!contacto.avatar)
         {
             if (self.tableView.dragging == NO && self.tableView.decelerating == NO)
             {
                 [self startAvatarLoad:contacto forIndexPath:indexPath];
             }
-            
             cell.avatarImageView.image = [UIImage imageNamed:@"blank_avatar.png"];
-            
         }else
         {
             cell.avatarImageView.image = contacto.avatar;
-            
         }
     }
     
@@ -199,7 +188,6 @@
         for (NSIndexPath *indexPath in visiblePaths)
         {
             Contacto *contacto = [self.contactos objectAtIndex:indexPath.row];
-            
             if (!contacto.avatar)
             {
                 [self startAvatarLoad:contacto forIndexPath:indexPath];

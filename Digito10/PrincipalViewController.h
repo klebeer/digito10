@@ -15,7 +15,7 @@
   
 @property (nonatomic, strong) IBOutlet FXLabel *logoLabel;
 
-
+@property (nonatomic,retain)NSArray *contactos;
 @property (nonatomic, strong) IBOutlet UIButton *listarContactosButton;
 
 @property (nonatomic, strong) IBOutlet UIButton *actualizarContactosButton;
